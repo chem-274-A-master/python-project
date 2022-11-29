@@ -1,11 +1,11 @@
 # Python Final Project - Lennard Jones Molecular Dynamics Simulations
 
-In Chem 280, the prerequisite for this course, we wrote a Monte Carlo simulation code for a Lennard Jones fluid. 
+In Chem 280 (the prerequisite for this course) we wrote a Monte Carlo simulation code for a Lennard Jones fluid. 
 In this class, we have used this MC code to study a system under varying conditions (lab 1), performed molecular dynamics simulations using research softare (lab 2), and wrote our own MD integrators for a  diatomic system (problem set 2).
 
 This repository contains an implementation of a molecular dynamics simulation for a Lennard Jones fluid. 
 The provided simulation runs at constant number of particles (N), constance volume (V), and constant energy (E).
-Your task for this lab will be to assess the code that is been provided, and improve the its structure and performance. 
+Your task for this project will be to assess the code that is been provided, and improve the its structure and performance. 
 You should improve the code performance by examining the implementation, looking for unneccessary calculations, and through
 profiling the code and making appropriate changes (using `snakeviz`, for example). 
 This simple MD implementation only uses the Python Standard Library (except for plotting with matplotlib).
@@ -98,9 +98,15 @@ This is implemented in the `set_initial_velocities` function. Note that the temp
 ## Integration
 This MD simulation uses the [Velocity Verlet algorithm](https://en.wikipedia.org/wiki/Verlet_integration#velocity_verlet:~:text=O%7D%7D(%5CDelta%20t).%7D-,Velocity%20Verlet,-%5Bedit%5D), which was covered in Problem Set 2.
 
+## Improving the Simulation
+Your task for this project is to improve the molecular dynamics simulation script which has been provided in this repository. You will need to do the following:
+1. Evaluate and improve code performance. You should consider the necessity of each calculation and how you can leverage third party libraries, such as NumPy or Pandas in your software.
+2. Improve the project structure - You should examine the code structure and consider ways to improve its structure. You might choose to change function defintions or to implement classes. This should include adding appropriate error checks.
+3. Improve  the project documentation - make sure the project is adequately documented including in-code (comments and docstrings) and out of code (README) documentation.
+4. Running the project - Your simulation should have a command line interface. You should be able to run from the command line by inputting a simulation temperature, number of atoms, target density, output file, and options for creating graphs of the total energy or temperature vs simulation time step. Your command line interface should also have a `--help` message. Your command line interface should be documented in your `README`.
+5. You should use at least one example of inheritance, at least one example of a decorator, and at least one example of a context manager in your code.
+
 ## Turning in Your Assignment
-1. You should consider the project you turn in to be a software product. Your repository should have a `README` describing the project and its installation. You should also write in detail about any optimization or design decisions you made for improving the program. **Hint** - You will probably want to consider how to use object oriented programming as you improve the code structure.
-2. Your repository should include a `Makefile` with appropriate targets (explain `Makefile` use in the `README`).
-3. Your simulation should create a plot of the total simulation energy and one of the temperature.
-4. Your simulation should have a command line interface. You should be able to run from the command line by inputting a simulation temperature, number of atoms, target density, and output file. Your command line interface should also have a `--help` message. Your command line interface should be documented in your `README`.
+Consider the project you turn in to be a software product. Include files such as a `.gitignore` and be careful with the files you commit. Your repository should have a `README` describing the project and its installation. You should also write in detail about any optimization or design decisions you made for improving the program. Please be very descriptive and verbose when explaining the decisions you made. 
+
 
